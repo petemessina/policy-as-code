@@ -1,0 +1,39 @@
+variables:
+  - group: 'Development Policy Settings'
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: TerraformInstaller@0
+    displayName: 'Install Terraform 0.14.3'
+    inputs:
+      terraformVersion: '0.14.3'
+  - task: TerraformTaskV2@2
+    displayName: 'Terraform Init'
+    inputs:
+      provider: 'azurerm'
+      command: 'init'
+      backendServiceArm: 'SERVICECONNECTIONNAME'
+      backendAzureRmResourceGroupName: 'NetworkWatcherRG'
+      backendAzureRmStorageAccountName: 'stpolicystate'
+      backendAzureRmContainerName: 'tfstate'
+      backendAzureRmKey: 'terraform.tfstate'
+      workingDirectory: '$(Build.SourcesDirectory)/tenant-a'
+  - task: TerraformTaskV2@2
+    displayName: 'Terraform Plan'
+    inputs:
+      provider: 'azurerm'
+      command: 'plan'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/tenant-a'
+      commandOptions: '-var="management_group_name=$(root-management-group-name)" -var="location=$(log-analytics-location)" -var="log_analytics_subscription_id=$(log-analytics-subscriptionid)" -var="log_analytics_resource_group_name=$(log-analytics-resource-group-name)" -var="log_analytics_name=$(log-analytics-name)"'
+      environmentServiceNameAzureRM: 'SERVICECONNECTIONNAME'
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: Policies'
+    inputs:
+      PathtoPublish: '$(Build.SourcesDirectory)'
+      ArtifactName: PolicyFiles

@@ -1,0 +1,209 @@
+{
+    "properties": {
+     "displayName": "Organizational Diagnostic Settings2",
+     "description": "Organizational Diagnostic Settings",
+     "policyType": "Custom",
+     "metadata": {
+      "category": "Monitoring",
+      "version": "1.0.0",
+      "parameterScopes": {
+       "logAnalytics": "/subscriptions/b3a44db2-7383-408a-b670-c998f9c99b80",
+       "logAnalyticsWorkspaceId": "/subscriptions/b3a44db2-7383-408a-b670-c998f9c99b80"
+      },
+      "createdBy": "df78c770-a3d3-4a5d-b9cd-6066782c0b00",
+      "createdOn": "2021-11-10T19:26:22.1994018Z",
+      "updatedBy": null,
+      "updatedOn": null
+     },
+     "parameters": {
+      "log_analytics_workspace": {
+       "type": "string",
+       "metadata": {
+        "displayName": "Log Analytics workspace"
+       }
+      }
+     },
+     "policyDefinitions": [
+      {
+       "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Service Bus to Log Analytics workspace_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/04d53d87-841c-4f23-8a5b-21564380b55e",
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('log_analytics_workspace')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Search Services to Log Analytics workspace_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/08ba64b8-738f-4918-9686-730d2ed79c7d",
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('log_analytics_workspace')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Event Hub to Log Analytics workspace_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1f6e93e8-6b31-41b1-83f6-36e449a42579",
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('log_analytics_workspace')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Stream Analytics to Log Analytics workspace_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/237e0f7e-b0e8-4ec4-ad46-8c12cb66d673",
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('log_analytics_workspace')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Data Lake Storage Gen1 to Log Analytics workspace_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/25763a0a-5783-4f14-969e-79d4933eb74b",
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('log_analytics_workspace')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Logic Apps to Log Analytics workspace_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b889a06c-ec72-4b03-910a-cb169ee18721",
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('log_analytics_workspace')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Key Vault to Log Analytics workspace_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/bef3f64c-5290-43b7-85b0-9b254eef4c47",
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('log_analytics_workspace')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Recovery Services Vault to Log Analytics workspace for resource speci_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c717fb0c-d118-4c43-ab3d-ece30ac81fb3",
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('log_analytics_workspace')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Batch Account to Log Analytics workspace_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c84e5349-db6d-4769-805e-e14037dab9b5",
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('log_analytics_workspace')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Data Lake Analytics to Log Analytics workspace_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d56a5a7c-72d7-42bc-8ceb-3baf4c0eae03",
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('log_analytics_workspace')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Configure diagnostic settings for storage accounts to Log Analytics workspace_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6f8f98a4-f108-47cb-8e98-91a0d85cd474",
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('log_analytics_workspace')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Configure diagnostic settings for Azure Network Security Groups to Log Analytics workspace_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/98a2e215-5382-489e-bd29-32e7190a39ba",
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('log_analytics_workspace')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Deploy - Configure diagnostic settings for Azure Kubernetes Service to Log Analytics workspace_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6c66c325-74c8-42fd-a286-a74b0e2939d8",
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('log_analytics_workspace')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Configure Azure SQL database servers diagnostic settings to Log Analytics workspace_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7ea8a143-05e3-4553-abfe-f56bef8b0b70",
+       "parameters": {
+        "logAnalyticsWorkspaceId": {
+         "value": "[parameters('log_analytics_workspace')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Deploy - Configure diagnostic settings to a Log Analytics workspace to be enabled on Azure Key Vault_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b3884c81-31aa-473d-a9bb-9466fe0ec2a0",
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('log_analytics_workspace')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Diagnostic logs in App Services should be enabled_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b607c5de-e7d9-4eee-9e5c-83f1bcee4fa0",
+       "parameters": {},
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Deploy - Configure diagnostic settings for SQL Databases to Log Analytics workspace_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b79fa14e-238a-4c2d-b376-442ce508fc84",
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('log_analytics_workspace')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Deploy - Configure diagnostic settings for Azure Key Vault to Log Analytics workspace_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/951af2fa-529b-416e-ab6e-066fd85ac459",
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('log_analytics_workspace')]"
+        }
+       },
+       "groupNames": []
+      }
+     ],
+     "policyDefinitionGroups": []
+    },
+    "id": "/subscriptions/b3a44db2-7383-408a-b670-c998f9c99b80/providers/Microsoft.Authorization/policySetDefinitions/a3879b8dae0644f388923422",
+    "type": "Microsoft.Authorization/policySetDefinitions",
+    "name": "a3879b8dae0644f388923422"
+   }
