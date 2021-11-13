@@ -175,12 +175,6 @@
        "groupNames": []
       },
       {
-       "policyDefinitionReferenceId": "Diagnostic logs in App Services should be enabled_1",
-       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b607c5de-e7d9-4eee-9e5c-83f1bcee4fa0",
-       "parameters": {},
-       "groupNames": []
-      },
-      {
        "policyDefinitionReferenceId": "Deploy - Configure diagnostic settings for SQL Databases to Log Analytics workspace_1",
        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b79fa14e-238a-4c2d-b376-442ce508fc84",
        "parameters": {
