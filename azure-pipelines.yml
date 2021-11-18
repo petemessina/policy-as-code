@@ -30,7 +30,7 @@ steps:
       provider: 'azurerm'
       command: 'plan'
       workingDirectory: '$(System.DefaultWorkingDirectory)/tenant-a'
-      commandOptions: '-var="management_group_name=$(root-management-group-name)" -var="management_group_id=$(management-group-id)" -var="location=$(log-analytics-location)" -var="log_analytics_subscription_id=$(log-analytics-subscriptionid)" -var="log_analytics_resource_group_name=$(log-analytics-resource-group-name)" -var="log_analytics_name=$(log-analytics-name)"'
+      commandOptions: '-var="management_group_name=$(root-management-group-name)" -var="location=$(log-analytics-location)" -var="log_analytics_subscription_id=$(log-analytics-subscriptionid)" -var="log_analytics_resource_group_name=$(log-analytics-resource-group-name)" -var="log_analytics_name=$(log-analytics-name)"'
       environmentServiceNameAzureRM: 'ManagedTenantSC'
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Artifact: Policies'
