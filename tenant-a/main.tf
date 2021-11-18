@@ -7,9 +7,9 @@ provider "azurerm" {
 # State Location
 terraform {
   backend "azurerm" {
-    resource_group_name   = "NetworkWatcherRG"
-    storage_account_name  = "stpolicystate"
-    container_name        = "tfstate"
+    resource_group_name   = "policy-as-code"
+    storage_account_name  = "managedtenanttfstate"
+    container_name        = "terraform"
     key                   = "terraform.tfstate"
   }
 }
